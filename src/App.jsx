@@ -1,8 +1,10 @@
+import React from "react"
+import { JokeList } from "./Joke"
+
 function App() {
   return (
     <div>
-      <p>hello</p>
-      <p>hej</p>
+      <JokeList />
     </div>
   )
 }
