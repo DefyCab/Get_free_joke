@@ -5,16 +5,24 @@ export function JokeList() {
 
   useEffect(() => {
     fetch("https://official-joke-api.appspot.com/jokes/ten")
-      .then((res) => res.json())
+      .then((result) => result.json())
       .then(setJokes)
-    }, [])
-    debugger
+  }, [])
 
   return (
     <ol>
       {jokes.map((joke) => (
-        <li key={joke.id}>{joke.setup}</li>
+        <div>
+          <ol key={joke.id}>{joke.setup}</ol>
+          <ol>{joke.punchline}</ol>
+          <br></br>
+        </div>
       ))}
     </ol>
   )
 }
+
+// todolist:
+
+// change button when clicked
+// display joke when click on button
