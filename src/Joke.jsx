@@ -10,11 +10,13 @@ export function JokeList() {
   }, [])
 
   return (
-    <ol>
+    <ol className="result">
       {jokes.map((joke) => (
         <div>
-          <ol key={joke.id}>{joke.setup}</ol>
-          <ol>{joke.punchline}</ol>
+          <ol className="setup" key={joke.id}>
+            {joke.setup}
+          </ol>
+          <ol className="punchline">{joke.punchline}</ol>
           <br></br>
         </div>
       ))}
