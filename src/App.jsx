@@ -1,19 +1,28 @@
 import React from "react"
 import { useEffect, useState } from "react"
-import axios from "axios"
 import { JokeList } from "./Joke"
-import { GetUser } from "./GetUser"
+import { GetJoke } from "./GetJoke"
 import "./App.css"
 
 function App() {
+  const [jokeToggle, setJokeToggle] = useState("")
+
+  // useEffect(() => {}, [])
+
   return (
     <div>
-      <h1>Click on the buttons for jokes!</h1>
-      <button>One</button>
-      <button className="ten">Ten</button>
+      <div className="question-box">
+        <h1>Click on the buttons for jokes!</h1>
+      <button onClick={() => setJokeToggle("one")} className="one">
+        One
+      </button>
+      <button onClick={() => setJokeToggle("ten")} className="ten">
+        Ten
+      </button>
+      </div>
       <div>
-        <GetUser />
-        {/* <JokeList /> */}
+        {jokeToggle === "one" && <GetJoke />}
+        {jokeToggle === "ten" && <JokeList />}
       </div>
     </div>
   )

@@ -1,11 +1,12 @@
 body {
-    background-color: darkgrey;
-    width: 500px;
+    display: inline;
+    background-image: url(./images/background_medium.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 
-
-button {
+.one {
     color: white;
     font-size: large;
     font-weight: bold;
@@ -14,12 +15,12 @@ button {
     background-color: purple;
     margin-left: 7px;
     cursor: pointer;
-    transition: background-color 100ms ease-in-out, 
-    color 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out,
+        color 100ms ease-in-out;
     border: 1px solid grey;
 }
 
-button:hover {
+.one:hover {
     background-color: violet;
     color: purple;
 }
@@ -43,28 +44,40 @@ button:hover {
 h1 {
     font-size: normal;
     font-weight: 50;
-    color: blue;
+    color: white;
 }
 
 .result {
+    font-style: normal;
+    font-size: large;
+    color: black;
+    font-weight: bold;
     flex-direction: column;
     background-color: lightgrey;
     margin: 5px;
     margin-top: 10px;
     border-radius: 1%;
     padding: 0px;
+    width: fit-content;
 }
 
-.list {
-    background-color: beige;
+.question-box {
+    border-radius: 5%;
+    padding: 2px;
+    margin-bottom: 5px;
+    border: 2px;
+    border-color: black;
+    width: fit-content;
 }
 
 .setup {
     padding: 2px;
     margin-left: 10px;
+    color: black;
 }
 
 .punchline {
     padding: 2px;
     margin-left: 10px;
+    color: rebeccapurple;
 }

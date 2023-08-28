@@ -1,8 +1,8 @@
-import React from "react"
 import { useState, useEffect } from "react"
 
-export function GetUser() {
+export function GetJoke() {
   const [joke, setJokes] = useState([])
+
   useEffect(() => {
     fetch("https://official-joke-api.appspot.com/random_joke")
       .then((result) => result.json())
@@ -13,8 +13,8 @@ export function GetUser() {
     <ol className="result">
       <div>
         <ol className="setup">{joke.setup}</ol>
-        <ol className="punchline">{joke.punchline}</ol>
         <br></br>
+        <ol className="punchline">{joke.punchline}</ol>
       </div>
     </ol>
   )
