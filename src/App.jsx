@@ -1,5 +1,8 @@
 import React from "react"
+import { useEffect, useState } from "react"
+import axios from "axios"
 import { JokeList } from "./Joke"
+import { GetUser } from "./GetUser"
 import "./App.css"
 
 function App() {
@@ -9,7 +12,8 @@ function App() {
       <button>One</button>
       <button className="ten">Ten</button>
       <div>
-        <JokeList />
+        <GetUser />
+        {/* <JokeList /> */}
       </div>
     </div>
   )
