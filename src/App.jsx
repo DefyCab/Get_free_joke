@@ -1,18 +1,16 @@
 import React from "react"
-import { useEffect, useState } from "react"
-import { JokeList } from "./Joke"
-import { GetJoke } from "./GetJoke"
-import "./App.css"
+import { useState } from "react"
+import { JokeList } from "./components/Joke"
+import { GetJoke } from "./components/GetJoke"
+import "./css/App.css"
 
 function App() {
   const [jokeToggle, setJokeToggle] = useState("")
 
-  // useEffect(() => {}, [])
-
   return (
     <div>
       <div className="question-box">
-        <h1>Click on the buttons for jokes!</h1>
+        <h1>J O K E S</h1>
       <button onClick={() => setJokeToggle("one")} className="one">
         One
       </button>

@@ -24,7 +24,3 @@ export function JokeList() {
   )
 }
 
-// todolist:
-
-// change button when clicked
-// display joke when click on button
